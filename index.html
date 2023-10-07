@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - list</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="todo-box">
+        <h2>TODO App</h2>
+        <form action="">
+            <div class="todo-from">
+                <input type="text" name="" id="Title" placeholder="Add New Title" required>
+            </div>
+            <div class="todo-from">
+                <input type="text" name="" id="Task" placeholder="Add New Task" required>
+            </div>
+            <div class="todo-submit">
+                <button type="button" class="btn1" onclick="taskAdd()">
+                    <svg enable-background="new 0 0 50 50" height="30px" id="Layer_1" version="1.1" viewBox="0 0 50 50"
+                        width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect fill="none" height="50" width="50" />
+                        <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="9" x2="41"
+                            y1="25" y2="25" />
+                        <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="25" x2="25"
+                            y1="9" y2="41" />
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+        <div class="task-heading">
+            <h3>Tasks</h3>
+        </div>
+        <div id="todo-items">
+            
+        </div>
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

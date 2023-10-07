@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+}
+.todo-box {
+  background-color: #fff;
+  width: 570px;
+  border: 5px solid #abcea1;
+  padding: 20px;
+  border-radius: 13px;
+}
+.todo-box h2{
+    font-weight: 400;
+    font-size: 35px;
+    padding: 10px 0;
+}
+.todo-from {
+  background-color: #e2eede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.todo-submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.todo-from input {
+  border: 0;
+  width: 400px;
+  background-color: transparent;
+  font-weight: 400;
+  padding: 10px;
+  font-size: 20px;
+  caret-color: #6e9464;
+}
+.todo-from input:focus {
+  outline: none;
+  border: none;
+}
+.todo-from input::placeholder{
+    color: #000 !important;
+}
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #abcea1;
+  width: 35px;
+  height: 35px;
+  border: 0;
+}
+
+.task-heading h3{
+    font-weight: 400;
+    font-size: 30px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.todo-list{
+    background-color: #e2eede;
+    border: 3px solid #abcea1;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.todo-list p{
+    color: #000;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.todo-list h5{
+    font-weight: 400;
+    color: #525252;
+    font-size: 19px;
+    padding: 5px 10px;
+}
+.todo-list h4{
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+.icons ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons ul li{
+    list-style: none;
+    padding: 0 10px;
+}
+.fa{
+    font-size: 2em !important; 
+}
+.btn2{
+    border: 0;
+    background-color: transparent;
+}
