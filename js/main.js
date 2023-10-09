@@ -1,21 +1,30 @@
-let taskArray = [];
+
+let taskArray = JSON.parse(localStorage.getItem('arrayItem'))|| ||[];
 
 function taskAdd() {
-  const valueTitle = document.getElementById("Title").value;
-  const valueTask = document.getElementById("Task").value;
+  let valueTitle = document.getElementById("Title").value;
+  let valueTask = document.getElementById("Task").value;
+  let clearValue = document.getElementById("Title");
+  let clearTask =document.getElementById("Task");
   if(valueTitle !="" && valueTask !=""){
     const taskObject = { id: Date.now(), title: valueTitle, task: valueTask };
     taskArray.push(taskObject);
+    clearValue.value ="";
+    clearTask.value ="";
     console.log(taskArray);
+    const saveArray = JSON.stringify(taskArray);
+    localStorage.setItem('arrayItem', saveArray);
   }else{
     alert("Enter the value")
   }
+  
   viewTask();
 }
 const taskList = document.getElementById("todo-items");
 function viewTask() {
   taskList.innerHTML = "";
-  taskArray.forEach((task) => {
+  let storageItems = JSON.parse(localStorage.getItem('arrayItem'));
+  storageItems.forEach((task) => {
     const listItem = document.createElement("div");
     listItem.classList.add("todo-list");
     listItem.innerHTML = `<p>Title: ${
@@ -36,6 +45,11 @@ function viewTask() {
 }
 
 function deleteTask(task) {
-  taskArray.splice(0, 1);
-  taskList.removeChild(taskList.firstElementChild);
+  const taskIndex = taskArray.findIndex(elm=>elm.id === task);
+if(taskIndex!==-1){
+  taskArray.splice(taskIndex, 1);
+  taskList.removeChild(taskList.children[taskIndex]);
+localStorage.setItem('arrayItem', JSON.stringify(taskArray))
 }
+}
+viewTask();
