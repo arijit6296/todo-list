@@ -1,5 +1,5 @@
 
-let taskArray = JSON.parse(localStorage.getItem('arrayItem'))|| ||[];
+let taskArray = JSON.parse(localStorage.getItem('arrayItem'))||[];
 
 function taskAdd() {
   let valueTitle = document.getElementById("Title").value;
